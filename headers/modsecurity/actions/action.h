@@ -23,7 +23,6 @@
 
 #include "modsecurity/intervention.h"
 #include "modsecurity/rule.h"
-#include "modsecurity/rule_with_actions.h"
 
 #ifndef HEADERS_MODSECURITY_ACTIONS_ACTION_H_
 #define HEADERS_MODSECURITY_ACTIONS_ACTION_H_
@@ -32,14 +31,15 @@
 
 namespace modsecurity {
 class Transaction;
-class RuleWithOperator;
+class RuleWithActions;
+
 
 namespace actions {
 
 
 class Action {
  public:
-    Action(const std::string& _action, int kind = 2)
+    explicit Action(const std::string& _action, int kind = 2)
         : m_actionKind(kind),
         m_name(nullptr),
         m_parser_payload("") {
