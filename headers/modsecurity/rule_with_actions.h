@@ -64,7 +64,6 @@ using MatchActionsPtr = std::vector<actions::Action *>;
 using XmlNSs = std::vector<std::shared_ptr<actions::XmlNS> >;
 using XmlNSsPtr = std::vector<actions::XmlNS *>;
 
-using ModSecStackString = std::basic_string<char, std::char_traits<char>, std::allocator<char> >;
 
 class TransformationResult {
  public:

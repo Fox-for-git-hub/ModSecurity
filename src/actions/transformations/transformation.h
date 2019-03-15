@@ -39,6 +39,8 @@ class Transformation : public Action {
             out.assign(in.c_str(), in.length());
     }
 
+    virtual bool isNone() { return false; }
+
     static Transformation* instantiate(std::string a);
 };
 
