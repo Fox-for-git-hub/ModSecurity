@@ -91,6 +91,8 @@ typedef struct ModSecurity_t modsecurity;
 namespace modsecurity {
     using ModSecStackString = std::basic_string<char, std::char_traits<char>, std::allocator<std::string>>;
 
+    using RuleId = int64_t;
+
     /**
      *
      * The Phases enumerator consists in mapping the different stages of a
